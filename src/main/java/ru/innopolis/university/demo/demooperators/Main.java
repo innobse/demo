@@ -15,7 +15,13 @@ import ru.innopolis.university.demo.demooperators.callable.ArraySummator;
 public class Main {
 
   public static void main(String[] args) throws ExecutionException, InterruptedException {
-    demoCallable2();
+//    demoCallable2();
+
+    new Thread(() -> {
+      for (int i = 0; i < 10; i++) {
+        System.out.println("Я поток! Сообщение " + i);
+      }
+    }).start();
 
   }
 
